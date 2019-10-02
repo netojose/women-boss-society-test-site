@@ -1,0 +1,7 @@
+.DS_STORE
+node_modules
+*~
+coverage/
+yarn-error.log
+*.log*
+.vscode
