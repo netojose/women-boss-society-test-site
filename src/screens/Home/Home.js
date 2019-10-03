@@ -4,6 +4,9 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
+import CenteredContent from '../../components/CenteredContent'
+import Title from '../../components/Title'
+
 const MenuItem = ({ to, i18nKey }) => {
     const { t } = useTranslation()
     return (
@@ -36,33 +39,21 @@ MenuItem.propTypes = {
     i18nKey: PropTypes.string.isRequired
 }
 
-export default () => {
-    const { t } = useTranslation()
-    return (
-        <div
+export default () => (
+    <CenteredContent>
+        <Title labelKey="home.site_name" />
+        <ul
             css={css`
+                list-style: none;
+                padding: 0;
+                margin: 0;
                 display: flex;
                 align-items: center;
-                justify-content: center;
                 flex-direction: column;
-                width: 100%;
-                height: 100vh;
             `}
         >
-            <h1>{t('home.site_name')}</h1>
-            <ul
-                css={css`
-                    list-style: none;
-                    padding: 0;
-                    margin: 0;
-                    display: flex;
-                    align-items: center;
-                    flex-direction: column;
-                `}
-            >
-                <MenuItem to="/register/company" i18nKey="sign_up_company" />
-                <MenuItem to="/register/user" i18nKey="sign_up_user" />
-            </ul>
-        </div>
-    )
-}
+            <MenuItem to="/register/company" i18nKey="sign_up_company" />
+            <MenuItem to="/register/user" i18nKey="sign_up_user" />
+        </ul>
+    </CenteredContent>
+)

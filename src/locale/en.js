@@ -1,4 +1,7 @@
 export default {
+    general: {
+        back: 'Back'
+    },
     home: {
         site_name: 'Women Boss Society',
         sign_up_company: 'Sign up as company',
@@ -25,6 +28,7 @@ export default {
         }
     },
     user_registration: {
-        title: 'User registration'
+        title: 'User registration',
+        coming_soon: 'Coming soon'
     }
 }
