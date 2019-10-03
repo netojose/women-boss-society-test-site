@@ -3,7 +3,14 @@ import PropTypes from 'prop-types'
 
 import FormContext from './context'
 
-const Form = ({ children, onSubmit, onChange, errors, i18Namespace }) => {
+const Form = ({
+    children,
+    onSubmit,
+    onChange,
+    errors,
+    i18Namespace,
+    className
+}) => {
     const [values, setValues] = useState({})
     const handleSubmit = useCallback(
         e => {
@@ -23,7 +30,7 @@ const Form = ({ children, onSubmit, onChange, errors, i18Namespace }) => {
         }
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} className={className}>
             <FormContext.Provider value={context}>
                 {children}
             </FormContext.Provider>
@@ -35,6 +42,7 @@ Form.defaultProps = {
     onSubmit: () => undefined,
     onChange: () => undefined,
     errors: {},
+    className: null,
     i18Namespace: null
 }
 
@@ -43,6 +51,7 @@ Form.propTypes = {
     onSubmit: PropTypes.func,
     onChange: PropTypes.func,
     errors: PropTypes.shape({}),
+    className: PropTypes.string,
     i18Namespace: PropTypes.string
 }
 

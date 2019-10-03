@@ -3,21 +3,17 @@ import PropTypes from 'prop-types'
 
 import inputPropTypes from './input-propTypes'
 import InputWrapper from './InputWrapper'
-import InputError from './InputError'
 
 const Input = ({ label, name, type }) => (
-    <InputWrapper label={label} id={name}>
-        {({ handleChange, value, error }) => (
-            <>
-                <input
-                    id={name}
-                    name={name}
-                    value={value}
-                    type={type}
-                    onChange={handleChange}
-                />
-                <InputError error={error} />
-            </>
+    <InputWrapper label={label} name={name}>
+        {({ handleChange, value, id }) => (
+            <input
+                id={id}
+                name={name}
+                value={value}
+                type={type}
+                onChange={handleChange}
+            />
         )}
     </InputWrapper>
 )

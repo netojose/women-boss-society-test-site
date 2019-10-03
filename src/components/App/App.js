@@ -12,6 +12,7 @@ export default () => (
             styles={css`
                 * {
                     font-family: Helvetica, Arial, sans-serif;
+                    box-sizing: border-box;
                 }
                 body {
                     margin: 0;

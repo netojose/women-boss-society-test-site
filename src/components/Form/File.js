@@ -1,13 +1,16 @@
-import React, { useCallback, useState, useRef } from 'react'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
+import { useCallback, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
+import { useTranslation } from 'react-i18next'
 
 import inputPropTypes from './input-propTypes'
 import InputWrapper from './InputWrapper'
-import InputError from './InputError'
 
 const imageTypes = ['image/gif', 'image/jpeg', 'image/png']
 
-const File = ({ label, name, accept, showPreview }) => {
+const File = ({ label, btnLabelKey, name, accept, showPreview }) => {
+    const { t } = useTranslation()
     const inputFileRef = useRef(null)
     const [previewSrc, setPreviewSrc] = useState(null)
     const handleChoose = useCallback((changeEvent, cb) => {
@@ -23,24 +26,27 @@ const File = ({ label, name, accept, showPreview }) => {
         inputFileRef.current.click()
     }, [inputFileRef])
     return (
-        <InputWrapper label={label} id={name}>
-            {({ handleChange, value, error }) => (
+        <InputWrapper label={label} name={name}>
+            {({ handleChange, value, id }) => (
                 <>
                     <input
-                        type="button"
-                        value="Choose your file"
-                        onClick={handleInputFileClick}
-                    />
-                    <InputError error={error} />
-                    <input
-                        hidden
+                        css={css`
+                            && {
+                                display: none;
+                            }
+                        `}
                         type="file"
                         ref={inputFileRef}
-                        id={name}
+                        id={id}
                         name={name}
                         onChange={e => handleChoose(e, handleChange)}
                         value={value}
                         accept={accept}
+                    />
+                    <input
+                        type="button"
+                        value={t(btnLabelKey)}
+                        onClick={handleInputFileClick}
                     />
                     {previewSrc && (
                         <img alt="Upload preview" src={previewSrc} />
@@ -58,6 +64,7 @@ File.defaultProps = {
 
 File.propTypes = {
     ...inputPropTypes,
+    btnLabelKey: PropTypes.string.isRequired,
     accept: PropTypes.string,
     showPreview: PropTypes.bool
 }

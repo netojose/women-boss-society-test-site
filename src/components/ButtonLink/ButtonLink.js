@@ -15,8 +15,10 @@ const ButtonLink = ({ to, labelKey }) => {
                 background: #fff;
                 border: solid 1px #fadada;
                 padding: 10px;
+                margin: 0 5px;
                 transition: 0.25s;
                 cursor: pointer;
+                font-size: 16px;
                 &:hover {
                     background: #fadada;
                     color: #fff;

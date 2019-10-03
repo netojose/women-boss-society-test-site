@@ -1,9 +1,12 @@
-import React, { useCallback, useState } from 'react'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
+import { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import CenteredContent from '../../components/CenteredContent'
 import Header from '../../components/Header'
 import Form from '../../components/Form'
+import ButtonLink from '../../components/ButtonLink'
 import validator from '../../utils/validator'
 import { maxwords } from '../../utils/custom-validation-rules'
 
@@ -63,13 +66,21 @@ export default () => {
                     onChange={handleChange}
                     i18Namespace="company_registration.form"
                     errors={formErrors}
+                    css={css`
+                        width: 350px;
+                        margin-bottom: 10px;
+                    `}
                 >
                     <Form.Input name="name" />
                     <Form.Input name="email" type="email" />
                     <Form.Input name="verify_email" type="email" />
                     <Form.Input name="password" type="password" />
                     <Form.Input name="verify_password" type="password" />
-                    <Form.File name="logo" accept="image/*" />
+                    <Form.File
+                        name="logo"
+                        btnLabelKey="company_registration.form.logo_upload_text"
+                        accept="image/*"
+                    />
                     <Form.Textarea name="bio" label="Company bio *" />
                     <Form.Select
                         name="type"
@@ -86,6 +97,7 @@ export default () => {
                             { label: 'Travel', value: 9 }
                         ]}
                     />
+                    <ButtonLink labelKey="general.cancel" to="/" />
                     <Form.Submit
                         i18KeyLabel="submit"
                         disabled={!enabledSubmit}
@@ -93,7 +105,12 @@ export default () => {
                 </Form>
             )}
             {step === 2 && (
-                <p>{t('company_registration.step_2_coming_soon_text')}</p>
+                <div>
+                    <Header
+                        priority={3}
+                        labelKey="company_registration.step_2_coming_soon_text"
+                    />
+                </div>
             )}
         </CenteredContent>
     )

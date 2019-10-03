@@ -1,6 +1,7 @@
 export default {
     general: {
-        back: 'Back'
+        back: 'Back',
+        cancel: 'Cancel'
     },
     home: {
         site_name: 'Women Boss Society',
@@ -22,6 +23,7 @@ export default {
             password: 'Password *',
             verify_password: 'Verify password *',
             logo: 'Company logo *',
+            logo_upload_text: 'Click here to upload logo',
             bio: 'Company bio *',
             type: 'Type of business *',
             submit: 'Save and proceed to step two'
