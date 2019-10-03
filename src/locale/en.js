@@ -1,5 +1,6 @@
 export default {
     home: {
+        site_name: 'Women Boss Society',
         sign_up_company: 'Sign up as company',
         sign_up_user: 'Sign up as a user'
     },
