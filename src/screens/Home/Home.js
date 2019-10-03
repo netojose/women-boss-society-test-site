@@ -1,10 +1,14 @@
 /** @jsx jsx */
 import { css, jsx } from '@emotion/core'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 export default () => (
     <div>
-        <ul  css={css`list-style:none`}>
+        <ul
+            css={css`
+                list-style: none;
+            `}
+        >
             <li>
                 <Link to="/register/company">Sign up as company</Link>
             </li>
