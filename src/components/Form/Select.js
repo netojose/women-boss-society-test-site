@@ -1,18 +1,32 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import inputPropTypes from './input-propTypes'
 import InputWrapper from './InputWrapper'
 
-const Select = ({ label, name }) => (
+const Select = ({ label, name, options }) => (
     <InputWrapper label={label} id={name}>
-        <select id={name} name={name}>
-            <option>oi</option>
-        </select>
+        {({ handleChange, value }) => (
+            <select id={name} name={name} onChange={handleChange} value={value}>
+                {options.map(option => (
+                    <option key={option.value} value={option.value}>
+                        {option.label}
+                    </option>
+                ))}
+            </select>
+        )}
     </InputWrapper>
 )
 
 Select.propTypes = {
-    ...inputPropTypes
+    ...inputPropTypes,
+    options: PropTypes.arrayOf(
+        PropTypes.shape({
+            label: PropTypes.string.isRequired,
+            value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+                .isRequired
+        })
+    ).isRequired
 }
 
 export default Select

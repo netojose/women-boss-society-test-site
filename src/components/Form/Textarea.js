@@ -5,7 +5,14 @@ import InputWrapper from './InputWrapper'
 
 const Textarea = ({ label, name }) => (
     <InputWrapper label={label} id={name}>
-        <textarea id={name} name={name} />
+        {({ handleChange, value }) => (
+            <textarea
+                id={name}
+                name={name}
+                value={value}
+                onChange={handleChange}
+            />
+        )}
     </InputWrapper>
 )
 

@@ -5,7 +5,15 @@ import InputWrapper from './InputWrapper'
 
 const File = ({ label, name }) => (
     <InputWrapper label={label} id={name}>
-        <input type="file" id={name} name={name} />
+        {({ handleChange, value }) => (
+            <input
+                type="file"
+                id={name}
+                name={name}
+                onChange={handleChange}
+                value={value}
+            />
+        )}
     </InputWrapper>
 )
 

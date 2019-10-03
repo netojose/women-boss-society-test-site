@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import PropTypes from 'prop-types'
 
-const InputWrapper = ({ children, label, id }) => (
-    <div>
-        <label htmlFor={id}>{label}</label>
-        {children}
-    </div>
-)
+import FormContext from './context'
+
+const InputWrapper = ({ children, label, id }) => {
+    const { values, handleChange } = useContext(FormContext)
+    return (
+        <div>
+            <label htmlFor={id}>{label}</label>
+            {children({ value: values[id] || '', handleChange })}
+        </div>
+    )
+}
 
 InputWrapper.propTypes = {
-    children: PropTypes.node.isRequired,
+    children: PropTypes.func.isRequired,
     label: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired
 }

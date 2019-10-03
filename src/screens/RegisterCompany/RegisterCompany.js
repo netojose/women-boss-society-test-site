@@ -4,11 +4,11 @@ import Form from '../../components/Form'
 
 export default () => (
     <div>
-        <Form>
+        <Form onSubmit={v => console.log(v)}>
             <Form.Input name="name" label="Company name *" />
             <Form.Input name="email" label="Email *" type="email" />
             <Form.Input
-                name="vefiry_email"
+                name="verify_email"
                 label="Verify email *"
                 type="email"
             />
@@ -20,7 +20,14 @@ export default () => (
             />
             <Form.File name="logo" label="Company logo" />
             <Form.Textarea name="bio" label="Company bio" />
-            <Form.Select name="type" label="Type of business" />
+            <Form.Select
+                name="type"
+                label="Type of business"
+                options={[
+                    { label: 'A', value: 'a' },
+                    { label: 'B', value: 'b' }
+                ]}
+            />
             <Form.Submit />
         </Form>
     </div>

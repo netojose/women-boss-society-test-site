@@ -6,7 +6,15 @@ import InputWrapper from './InputWrapper'
 
 const Input = ({ label, name, type }) => (
     <InputWrapper label={label} id={name}>
-        <input id={name} name={name} type={type} />
+        {({ handleChange, value }) => (
+            <input
+                id={name}
+                name={name}
+                value={value}
+                type={type}
+                onChange={handleChange}
+            />
+        )}
     </InputWrapper>
 )
 
