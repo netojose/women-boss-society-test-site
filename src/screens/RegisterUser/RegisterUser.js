@@ -1,12 +1,11 @@
-/** @jsx jsx */
-import { css, jsx } from '@emotion/core'
+import React from 'react'
+import { useTranslation } from 'react-i18next'
 
-export default () => (
-    <p
-        css={css`
-            color: red;
-        `}
-    >
-        Register as User
-    </p>
-)
+export default () => {
+    const { t } = useTranslation()
+    return (
+        <div>
+            <h2>{t('user_registration.title')}</h2>
+        </div>
+    )
+}

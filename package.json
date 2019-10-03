@@ -34,9 +34,11 @@
   "dependencies": {
     "@emotion/core": "^10.0.17",
     "Validator": "^1.0.8",
+    "i18next": "^17.0.18",
     "prop-types": "^15.7.2",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
+    "react-i18next": "^10.13.1",
     "react-router-dom": "^5.1.2"
   }
 }
