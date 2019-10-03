@@ -4,11 +4,13 @@ import PropTypes from 'prop-types'
 import FormContext from './context'
 
 const InputWrapper = ({ children, label, id }) => {
-    const { values, handleChange } = useContext(FormContext)
+    const { values, errors, handleChange } = useContext(FormContext)
+    const value = values[id] || ''
+    const error = errors[id] || ''
     return (
         <div>
             <label htmlFor={id}>{label}</label>
-            {children({ value: values[id] || '', handleChange })}
+            {children({ value, error, handleChange })}
         </div>
     )
 }

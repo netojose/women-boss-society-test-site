@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import inputPropTypes from './input-propTypes'
 import InputWrapper from './InputWrapper'
+import InputError from './InputError'
 
 const imageTypes = ['image/gif', 'image/jpeg', 'image/png']
 
@@ -23,13 +24,14 @@ const File = ({ label, name, accept, showPreview }) => {
     }, [inputFileRef])
     return (
         <InputWrapper label={label} id={name}>
-            {({ handleChange, value }) => (
+            {({ handleChange, value, error }) => (
                 <>
                     <input
                         type="button"
                         value="Choose your file"
                         onClick={handleInputFileClick}
                     />
+                    <InputError error={error} />
                     <input
                         hidden
                         type="file"

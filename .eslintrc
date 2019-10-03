@@ -19,6 +19,8 @@
         "semi": ["error", "never"],
         "comma-dangle": ["error", "never"],
         "arrow-parens": "off",
-        "implicit-arrow-linebreak": "off"
+        "implicit-arrow-linebreak": "off",
+        "import/prefer-default-export": "off",
+        "operator-linebreak": "off"
     }
 }

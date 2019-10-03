@@ -959,6 +959,11 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
+Validator@^1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/Validator/-/Validator-1.0.8.tgz#c795a5f5b1f3dff63e5dfe64b50ff07f419b10d3"
+  integrity sha512-ulkbBmf9m22C3l3oisUFX3ryEVAYDc4Il0lRCmx2ENniV1zOuSkIsuW5h3Sj1yDnoXKAM8A2f2hp5pSUWSbf7Q==
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"

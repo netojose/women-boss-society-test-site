@@ -3,17 +3,26 @@ import PropTypes from 'prop-types'
 
 import inputPropTypes from './input-propTypes'
 import InputWrapper from './InputWrapper'
+import InputError from './InputError'
 
 const Select = ({ label, name, options }) => (
     <InputWrapper label={label} id={name}>
-        {({ handleChange, value }) => (
-            <select id={name} name={name} onChange={handleChange} value={value}>
-                {options.map(option => (
-                    <option key={option.value} value={option.value}>
-                        {option.label}
-                    </option>
-                ))}
-            </select>
+        {({ handleChange, value, error }) => (
+            <>
+                <select
+                    id={name}
+                    name={name}
+                    onChange={handleChange}
+                    value={value}
+                >
+                    {options.map(option => (
+                        <option key={option.value} value={option.value}>
+                            {option.label}
+                        </option>
+                    ))}
+                </select>
+                <InputError error={error} />
+            </>
         )}
     </InputWrapper>
 )
