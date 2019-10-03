@@ -8,6 +8,7 @@
     },
     "rules": {
         "react/jsx-filename-extension": "off",
+        "object-curly-newline": "off",
         "indent": ["error", 4],
         "react/jsx-indent": [
             "error",
@@ -15,6 +16,7 @@
             { "checkAttributes": true, "indentLogicalExpressions": true }
         ],
         "react/jsx-indent-props": ["error", 4],
-        "semi": ["error", "never"]
+        "semi": ["error", "never"],
+        "comma-dangle": ["error", "never"]
     }
 }

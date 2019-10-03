@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
+    "prop-types": "^15.7.2",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-router-dom": "^5.1.2"
