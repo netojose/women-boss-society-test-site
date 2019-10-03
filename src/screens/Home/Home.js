@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import CenteredContent from '../../components/CenteredContent'
-import Title from '../../components/Title'
+import Header from '../../components/Header'
 
 const MenuItem = ({ to, i18nKey }) => {
     const { t } = useTranslation()
@@ -41,7 +41,7 @@ MenuItem.propTypes = {
 
 export default () => (
     <CenteredContent>
-        <Title labelKey="home.site_name" />
+        <Header labelKey="home.site_name" />
         <ul
             css={css`
                 list-style: none;

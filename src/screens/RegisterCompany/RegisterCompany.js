@@ -1,6 +1,8 @@
 import React, { useCallback, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
+import CenteredContent from '../../components/CenteredContent'
+import Header from '../../components/Header'
 import Form from '../../components/Form'
 import validator from '../../utils/validator'
 import { maxwords } from '../../utils/custom-validation-rules'
@@ -48,9 +50,13 @@ export default () => {
     }, [])
 
     return (
-        <div>
-            <h2>{t('company_registration.title')}</h2>
-            <h4>{t('company_registration.step', { start: 1, end: 2 })}</h4>
+        <CenteredContent>
+            <Header labelKey="company_registration.title" />
+            <Header
+                priority={2}
+                labelKey="company_registration.step"
+                placeholders={{ start: step, end: 2 }}
+            />
             {step === 1 && (
                 <Form
                     onSubmit={handleSubmit}
@@ -89,6 +95,6 @@ export default () => {
             {step === 2 && (
                 <p>{t('company_registration.step_2_coming_soon_text')}</p>
             )}
-        </div>
+        </CenteredContent>
     )
 }
