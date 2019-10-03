@@ -31,7 +31,7 @@ export default () => {
                     label="Verify password *"
                     type="password"
                 />
-                <Form.File name="logo" label="Company logo" />
+                <Form.File name="logo" label="Company logo" accept="image/*" />
                 <Form.Textarea name="bio" label="Company bio" />
                 <Form.Select
                     name="type"
