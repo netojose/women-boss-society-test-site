@@ -1,14 +1,13 @@
 import React from 'react'
 
 import CenteredContent from '../../components/CenteredContent'
-import Title from '../../components/Title'
-import Subtitle from '../../components/Subtitle'
+import Header from '../../components/Header'
 import ButtonLink from '../../components/ButtonLink'
 
 export default () => (
     <CenteredContent>
-        <Title labelKey="user_registration.title" />
-        <Subtitle labelKey="user_registration.coming_soon" />
+        <Header labelKey="user_registration.title" />
+        <Header priority={2} labelKey="user_registration.coming_soon" />
         <ButtonLink to="/" labelKey="general.back" />
     </CenteredContent>
 )
