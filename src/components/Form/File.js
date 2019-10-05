@@ -6,6 +6,7 @@ import { useTranslation } from 'react-i18next'
 
 import inputPropTypes from './input-propTypes'
 import InputWrapper from './InputWrapper'
+import { input as inputStyle } from '../../shared/styles'
 
 const imageTypes = ['image/gif', 'image/jpeg', 'image/png']
 
@@ -14,7 +15,7 @@ const File = ({ label, btnLabelKey, name, accept, showPreview }) => {
     const inputFileRef = useRef(null)
     const [previewSrc, setPreviewSrc] = useState(null)
     const handleChoose = useCallback((changeEvent, cb) => {
-        const file = changeEvent.target.files.item(0)
+        const file = changeEvent.target.files[0]
         if (showPreview && imageTypes.includes(file.type)) {
             const reader = new FileReader()
             reader.onload = loadEvent => setPreviewSrc(loadEvent.target.result)
@@ -46,6 +47,7 @@ const File = ({ label, btnLabelKey, name, accept, showPreview }) => {
                         type="button"
                         value={t(btnLabelKey)}
                         onClick={handleInputFileClick}
+                        css={inputStyle}
                     />
                     {previewSrc && (
                         <img

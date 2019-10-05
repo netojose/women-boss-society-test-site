@@ -1,8 +1,10 @@
-import React from 'react'
+/** @jsx jsx */
+import { jsx } from '@emotion/core'
 import PropTypes from 'prop-types'
 
 import inputPropTypes from './input-propTypes'
 import InputWrapper from './InputWrapper'
+import { input as inputStyle } from '../../shared/styles'
 
 const Input = ({ label, name, type }) => (
     <InputWrapper label={label} name={name}>
@@ -13,6 +15,7 @@ const Input = ({ label, name, type }) => (
                 value={value}
                 type={type}
                 onChange={handleChange}
+                css={inputStyle}
             />
         )}
     </InputWrapper>
