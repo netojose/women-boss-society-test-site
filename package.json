@@ -17,6 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^10.0.3",
@@ -33,6 +34,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.17",
+    "@loadable/component": "^5.10.3",
     "Validator": "^1.0.8",
     "i18next": "^17.0.18",
     "prop-types": "^15.7.2",

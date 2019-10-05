@@ -1,10 +1,14 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { Global, css } from '@emotion/core'
+import loadable from '@loadable/component'
 
-import Home from '../../screens/Home'
-import RegisterUser from '../../screens/RegisterUser'
-import RegisterCompany from '../../screens/RegisterCompany'
+const Loading = () => null
+const config = { fallback: <Loading /> }
+
+const Home = loadable(() => import('../../screens/Home'), config)
+const User = loadable(() => import('../../screens/RegisterUser'), config)
+const Company = loadable(() => import('../../screens/RegisterCompany'), config)
 
 export default () => (
     <>
@@ -22,10 +26,10 @@ export default () => (
         <Router>
             <Switch>
                 <Route path="/register/user">
-                    <RegisterUser />
+                    <User />
                 </Route>
                 <Route path="/register/company">
-                    <RegisterCompany />
+                    <Company />
                 </Route>
                 <Route path="/">
                     <Home />
