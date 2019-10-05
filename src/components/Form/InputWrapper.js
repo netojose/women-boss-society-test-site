@@ -27,34 +27,6 @@ const InputWrapper = ({ children, label, name }) => {
                 &:last-child {
                     margin: 0;
                 }
-                input,
-                select,
-                textarea {
-                    outline: none;
-                    display: block;
-                    background: rgba(250, 218, 218, 0.5);
-                    width: 100%;
-                    border: 0;
-                    border-radius: 0;
-                    box-sizing: border-box;
-                    padding: 12px 20px;
-                    color: #0009;
-                    font-family: inherit;
-                    font-size: inherit;
-                    font-weight: 500;
-                    line-height: inherit;
-                    transition: 0.3s ease;
-                    border: solid 1px rgba(250, 218, 218, 0.5);
-                    &:focus {
-                        border: solid 1px #0009;
-                    }
-                }
-                select {
-                    height: 42px;
-                }
-                textarea {
-                    height: 120px;
-                }
             `}
         >
             <label

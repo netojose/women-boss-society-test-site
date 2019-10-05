@@ -1,13 +1,26 @@
-import React from 'react'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/core'
 import PropTypes from 'prop-types'
 
 import inputPropTypes from './input-propTypes'
 import InputWrapper from './InputWrapper'
+import { input as inputStyle } from '../../shared/styles'
 
 const Select = ({ label, name, options }) => (
     <InputWrapper label={label} name={name}>
         {({ handleChange, value, id }) => (
-            <select id={id} name={name} onChange={handleChange} value={value}>
+            <select
+                id={id}
+                name={name}
+                onChange={handleChange}
+                value={value}
+                css={[
+                    inputStyle,
+                    css`
+                        height: 42px;
+                    `
+                ]}
+            >
                 {options.map(option => (
                     <option key={option.value} value={option.value}>
                         {option.label}
