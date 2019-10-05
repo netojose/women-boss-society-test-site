@@ -2,9 +2,9 @@
 import { css, jsx } from '@emotion/core'
 import PropTypes from 'prop-types'
 
-import inputPropTypes from './input-propTypes'
-import InputWrapper from './InputWrapper'
-import { input as inputStyle } from '../../shared/styles'
+import inputPropTypes from '../input-propTypes'
+import InputWrapper from '../InputWrapper'
+import { input as inputStyle } from '../../../shared/styles'
 
 const Select = ({ label, name, options }) => (
     <InputWrapper label={label} name={name}>

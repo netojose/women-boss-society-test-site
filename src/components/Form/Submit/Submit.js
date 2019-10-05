@@ -4,8 +4,8 @@ import { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 
-import FormContext from './context'
-import { button as buttonStyles } from '../../shared/styles'
+import FormContext from '../context'
+import { button as buttonStyles } from '../../../shared/styles'
 
 const Submit = ({ label, i18KeyLabel, disabled }) => {
     const { t } = useTranslation()

@@ -1,7 +1,7 @@
 import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 
-import FormContext from './context'
+import FormContext from '../context'
 
 const Form = ({
     children,

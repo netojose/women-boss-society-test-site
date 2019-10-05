@@ -1,7 +1,7 @@
 import React from 'react'
 import { mount } from 'enzyme'
 import File from './File'
-import Form from './Form'
+import Form from '../Form'
 
 describe('<File />', () => {
     test('render', () => {

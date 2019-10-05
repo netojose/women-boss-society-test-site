@@ -4,9 +4,9 @@ import { useCallback, useState, useRef } from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 
-import inputPropTypes from './input-propTypes'
-import InputWrapper from './InputWrapper'
-import { input as inputStyle } from '../../shared/styles'
+import inputPropTypes from '../input-propTypes'
+import InputWrapper from '../InputWrapper'
+import { input as inputStyle } from '../../../shared/styles'
 
 const imageTypes = ['image/gif', 'image/jpeg', 'image/png']
 

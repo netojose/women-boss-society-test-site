@@ -4,8 +4,8 @@ import { useContext } from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 
-import FormContext from './context'
-import InputError from './InputError'
+import FormContext from '../context'
+import InputError from '../InputError'
 
 const InputWrapper = ({ children, label, name }) => {
     const { values, errors, handleChange, i18Namespace } = useContext(
