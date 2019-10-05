@@ -23,7 +23,7 @@ const BUSINESS_TYPES = [
     { label: 'Travel', value: 9 }
 ]
 
-export default () => {
+const RegisterCompany = () => {
     const { t } = useTranslation()
     const [formValues, setFormValues] = useState({})
     const [step, setStep] = useState(1)
@@ -121,3 +121,5 @@ export default () => {
         </CenteredContent>
     )
 }
+
+export default RegisterCompany

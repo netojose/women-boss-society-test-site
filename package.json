@@ -1,46 +1,48 @@
 {
-  "name": "women-boss-society",
-  "version": "1.0.0",
-  "description": "",
-  "main": "webpack.config.js",
-  "scripts": {
-    "start": "webpack --mode=development",
-    "build": "webpack --mode=production",
-    "dev-server": "webpack-dev-server"
-  },
-  "keywords": [],
-  "author": {
-    "name": "José Sousa Neto",
-    "email": "sputinykster@gmail.com",
-    "url": "https://joseneto.dev"
-  },
-  "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/preset-env": "^7.6.2",
-    "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
-    "eslint": "^6.5.1",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.18.2",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.15.1",
-    "html-webpack-plugin": "^3.2.0",
-    "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
-    "webpack-dev-server": "^3.8.1"
-  },
-  "dependencies": {
-    "@emotion/core": "^10.0.17",
-    "@loadable/component": "^5.10.3",
-    "Validator": "^1.0.8",
-    "i18next": "^17.0.18",
-    "prop-types": "^15.7.2",
-    "react": "^16.10.1",
-    "react-dom": "^16.10.1",
-    "react-i18next": "^10.13.1",
-    "react-router-dom": "^5.1.2"
-  }
+    "name": "women-boss-society",
+    "version": "1.0.0",
+    "description": "",
+    "main": "webpack.config.js",
+    "scripts": {
+        "test": "jest",
+        "start": "webpack --mode=development",
+        "build": "webpack --mode=production",
+        "dev-server": "webpack-dev-server"
+    },
+    "keywords": [],
+    "author": {
+        "name": "José Sousa Neto",
+        "email": "sputinykster@gmail.com",
+        "url": "https://joseneto.dev"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.6.2",
+        "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+        "@babel/preset-env": "^7.6.2",
+        "@babel/preset-react": "^7.0.0",
+        "babel-eslint": "^10.0.3",
+        "babel-loader": "^8.0.6",
+        "eslint": "^6.5.1",
+        "eslint-config-airbnb": "^18.0.1",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jsx-a11y": "^6.2.3",
+        "eslint-plugin-react": "^7.15.1",
+        "html-webpack-plugin": "^3.2.0",
+        "jest": "^24.9.0",
+        "webpack": "^4.41.0",
+        "webpack-cli": "^3.3.9",
+        "webpack-dev-server": "^3.8.1"
+    },
+    "dependencies": {
+        "@emotion/core": "^10.0.17",
+        "@loadable/component": "^5.10.3",
+        "Validator": "^1.0.8",
+        "i18next": "^17.0.18",
+        "prop-types": "^15.7.2",
+        "react": "^16.10.1",
+        "react-dom": "^16.10.1",
+        "react-i18next": "^10.13.1",
+        "react-router-dom": "^5.1.2"
+    }
 }

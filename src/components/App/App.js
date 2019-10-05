@@ -10,7 +10,7 @@ const Home = loadable(() => import('../../screens/Home'), config)
 const User = loadable(() => import('../../screens/RegisterUser'), config)
 const Company = loadable(() => import('../../screens/RegisterCompany'), config)
 
-export default () => (
+const App = () => (
     <>
         <Global
             styles={css`
@@ -38,3 +38,5 @@ export default () => (
         </Router>
     </>
 )
+
+export default App

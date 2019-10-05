@@ -39,7 +39,7 @@ MenuItem.propTypes = {
     i18nKey: PropTypes.string.isRequired
 }
 
-export default () => (
+const Home = () => (
     <CenteredContent>
         <Header labelKey="home.site_name" />
         <ul
@@ -57,3 +57,5 @@ export default () => (
         </ul>
     </CenteredContent>
 )
+
+export default Home
