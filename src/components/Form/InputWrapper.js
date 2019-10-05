@@ -62,7 +62,7 @@ const InputWrapper = ({ children, label, name }) => {
                 css={css`
                     display: block;
                     margin: 0 0 10px;
-                    color: #0009;
+                    color: #666;
                     font-size: 12px;
                     font-weight: 500;
                     line-height: 1;
