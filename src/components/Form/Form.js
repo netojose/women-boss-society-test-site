@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 
 import FormContext from './context'
@@ -8,10 +8,10 @@ const Form = ({
     onSubmit,
     onChange,
     errors,
+    values,
     i18Namespace,
     className
 }) => {
-    const [values, setValues] = useState({})
     const handleSubmit = useCallback(
         e => {
             e.preventDefault()
@@ -23,11 +23,8 @@ const Form = ({
         values,
         errors,
         i18Namespace,
-        handleChange: ({ target: { name: field, value } }) => {
-            const data = { ...values, [field]: value }
-            onChange({ field, value, data })
-            setValues({ ...data, [field]: value })
-        }
+        handleChange: ({ target: { name: field, value } }) =>
+            onChange({ ...values, [field]: value })
     }
     return (
         <form onSubmit={handleSubmit} className={className}>
@@ -51,6 +48,7 @@ Form.propTypes = {
     onSubmit: PropTypes.func,
     onChange: PropTypes.func,
     errors: PropTypes.shape({}),
+    values: PropTypes.shape({}).isRequired,
     className: PropTypes.string,
     i18Namespace: PropTypes.string
 }

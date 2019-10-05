@@ -10,18 +10,30 @@ import ButtonLink from '../../components/ButtonLink'
 import validator from '../../utils/validator'
 import { maxwords } from '../../utils/custom-validation-rules'
 
+const BUSINESS_TYPES = [
+    { label: 'Please select', value: '' },
+    { label: 'Cinema', value: 1 },
+    { label: 'Ecommerce', value: 2 },
+    { label: 'Educational', value: 3 },
+    { label: 'Fashion', value: 4 },
+    { label: 'Food', value: 5 },
+    { label: 'Insurance', value: 6 },
+    { label: 'Medical', value: 7 },
+    { label: 'Sports', value: 8 },
+    { label: 'Travel', value: 9 }
+]
+
 export default () => {
     const { t } = useTranslation()
+    const [formValues, setFormValues] = useState({})
     const [step, setStep] = useState(1)
     const [formErrors, setFormErrors] = useState({})
     const [enabledSubmit, setEnabledSubmit] = useState(false)
 
-    const handleSubmit = useCallback(() => {
-        setStep(2)
-    }, [])
+    const handleSubmit = useCallback(() => setStep(2), [])
 
-    const handleChange = useCallback(values => {
-        const { data } = values
+    const handleOnChangeForm = useCallback(data => {
+        setFormValues(data)
         const rules = {
             name: 'required',
             email: 'required|email',
@@ -63,9 +75,10 @@ export default () => {
             {step === 1 && (
                 <Form
                     onSubmit={handleSubmit}
-                    onChange={handleChange}
+                    onChange={handleOnChangeForm}
                     i18Namespace="company_registration.form"
                     errors={formErrors}
+                    values={formValues}
                     css={css`
                         width: 350px;
                         margin-bottom: 10px;
@@ -82,21 +95,7 @@ export default () => {
                         accept="image/*"
                     />
                     <Form.Textarea name="bio" label="Company bio *" />
-                    <Form.Select
-                        name="type"
-                        options={[
-                            { label: 'Please select', value: '' },
-                            { label: 'Cinema', value: 1 },
-                            { label: 'Ecommerce', value: 2 },
-                            { label: 'Educational', value: 3 },
-                            { label: 'Fashion', value: 4 },
-                            { label: 'Food', value: 5 },
-                            { label: 'Insurance', value: 6 },
-                            { label: 'Medical', value: 7 },
-                            { label: 'Sports', value: 8 },
-                            { label: 'Travel', value: 9 }
-                        ]}
-                    />
+                    <Form.Select name="type" options={BUSINESS_TYPES} />
                     <ButtonLink labelKey="general.cancel" to="/" />
                     <Form.Submit
                         i18KeyLabel="submit"
