@@ -1,7 +1,8 @@
 export default {
     general: {
         back: 'Back',
-        cancel: 'Cancel'
+        cancel: 'Cancel',
+        upload_preview: 'Upload preview'
     },
     home: {
         site_name: 'Women Boss Society',

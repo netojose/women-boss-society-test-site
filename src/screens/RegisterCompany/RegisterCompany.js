@@ -96,11 +96,18 @@ export default () => {
                     />
                     <Form.Textarea name="bio" label="Company bio *" />
                     <Form.Select name="type" options={BUSINESS_TYPES} />
-                    <ButtonLink labelKey="general.cancel" to="/" />
-                    <Form.Submit
-                        i18KeyLabel="submit"
-                        disabled={!enabledSubmit}
-                    />
+                    <div
+                        css={css`
+                            display: flex;
+                            justify-content: space-evenly;
+                        `}
+                    >
+                        <ButtonLink labelKey="general.cancel" to="/" />
+                        <Form.Submit
+                            i18KeyLabel="submit"
+                            disabled={!enabledSubmit}
+                        />
+                    </div>
                 </Form>
             )}
             {step === 2 && (

@@ -27,7 +27,7 @@ const File = ({ label, btnLabelKey, name, accept, showPreview }) => {
     }, [inputFileRef])
     return (
         <InputWrapper label={label} name={name}>
-            {({ handleChange, value, id }) => (
+            {({ handleChange, id }) => (
                 <>
                     <input
                         css={css`
@@ -40,7 +40,6 @@ const File = ({ label, btnLabelKey, name, accept, showPreview }) => {
                         id={id}
                         name={name}
                         onChange={e => handleChoose(e, handleChange)}
-                        value={value}
                         accept={accept}
                     />
                     <input
@@ -49,7 +48,13 @@ const File = ({ label, btnLabelKey, name, accept, showPreview }) => {
                         onClick={handleInputFileClick}
                     />
                     {previewSrc && (
-                        <img alt="Upload preview" src={previewSrc} />
+                        <img
+                            alt={t('general.upload_preview')}
+                            src={previewSrc}
+                            css={css`
+                                max-width: 100%;
+                            `}
+                        />
                     )}
                 </>
             )}
