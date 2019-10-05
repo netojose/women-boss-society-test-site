@@ -7,8 +7,8 @@ import CenteredContent from '../../components/CenteredContent'
 import Header from '../../components/Header'
 import Form from '../../components/Form'
 import ButtonLink from '../../components/ButtonLink'
-import validator from '../../utils/validator'
-import { maxwords } from '../../utils/custom-validation-rules'
+import validator from '../../shared/validator'
+import { maxwords } from '../../shared/custom-validation-rules'
 
 const BUSINESS_TYPES = [
     { label: 'Please select', value: '' },
