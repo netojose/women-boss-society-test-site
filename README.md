@@ -11,7 +11,7 @@
 
 ## Time to complete specs
 
--   Environment setuop and tooling: 1h:30m
+-   Environment setup and tooling: 1h:30m
 -   Coding: 4h:30m
 -   Writing tests: 2h:30m
 -   Deploy: 0h:10m
