@@ -1193,10 +1193,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-Validator@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/Validator/-/Validator-1.0.8.tgz#c795a5f5b1f3dff63e5dfe64b50ff07f419b10d3"
-  integrity sha512-ulkbBmf9m22C3l3oisUFX3ryEVAYDc4Il0lRCmx2ENniV1zOuSkIsuW5h3Sj1yDnoXKAM8A2f2hp5pSUWSbf7Q==
+Validator@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/Validator/-/Validator-1.1.2.tgz#5de632713a8de83ea59b46e25836d685a3710b8e"
+  integrity sha512-A+NXj1N6LgWTkohexVJ98gYVQyTD0yi4e83Tf9ojkV9p7ll34IEfE2pL1zCRof6tU4buwE04cqaIEsXT2o7Ncw==
 
 abab@^2.0.0:
   version "2.0.2"
