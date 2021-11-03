@@ -40,7 +40,7 @@
     "dependencies": {
         "@emotion/core": "^10.0.17",
         "@loadable/component": "^5.10.3",
-        "Validator": "^1.0.8",
+        "Validator": "^1.1.4",
         "i18next": "^17.0.18",
         "prop-types": "^15.7.2",
         "react": "^16.10.1",
